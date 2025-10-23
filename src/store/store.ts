@@ -1,22 +1,23 @@
 // src/store/store.ts
-import { configureStore } from '@reduxjs/toolkit';
-import userReducer from '@/features/user/userSlice';
+import { configureStore } from "@reduxjs/toolkit";
+import { persistStore, persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage";
+import rootReducer from "./rootReducer";
+
+const persistConfig = {
+  key: "root",
+  storage,
+  whitelist: ["user"], // only persist user slice
+};
+
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
-  reducer: {
-    user: userReducer,
-    // add other feature reducers here
-  },
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({
-      serializableCheck: {
-        // adjust if you use non-serializable values from SDKs (e.g., Agora objects)
-        ignoredActions: [],
-      },
-    }),
-  devTools: process.env.NODE_ENV !== 'production',
+  reducer: persistedReducer,
+  devTools: process.env.NODE_ENV !== "production",
 });
 
-// types for hooks & components
+export const persistor = persistStore(store);
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
+export default store;
