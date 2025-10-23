@@ -5,8 +5,6 @@ import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-
-// If you don’t have design-system components yet, you can temporarily replace them with MUI components
 import {
   Button as MintButton,
   TextField as MintTextField,
@@ -14,6 +12,7 @@ import {
   Link as MintLink,
   Alert as MintAlert,
 } from "@mui/material";
+import { useTranslation } from "react-i18next"; // ✅ import i18n hook
 
 // Validation schema
 const Schema = yup.object().shape({
@@ -25,6 +24,7 @@ export type TScheme = yup.InferType<typeof Schema>;
 
 export default function Login() {
   const theme = useTheme();
+  const { t } = useTranslation(); // ✅ useTranslation hook
   const [form, setForm] = useState<{ error?: string }>({});
 
   const methods = useForm<TScheme>({
@@ -55,7 +55,7 @@ export default function Login() {
           fontWeight={700}
           color={theme.palette.primary.main}
         >
-          Login
+          {t("login.title")}
         </MintTypography>
       </Box>
 
@@ -73,7 +73,7 @@ export default function Login() {
         mx="auto"
       >
         <MintTypography variant="body1" color="text.secondary">
-          Please enter your credentials to continue
+          {t("login.subtitle")}
         </MintTypography>
 
         {/* Error message (if any) */}
@@ -90,7 +90,7 @@ export default function Login() {
           render={({ field, fieldState }) => (
             <MintTextField
               {...field}
-              label="Username"
+              label={t("login.username")}
               fullWidth
               error={!!fieldState.error}
               helperText={fieldState.error?.message}
@@ -105,7 +105,7 @@ export default function Login() {
           render={({ field, fieldState }) => (
             <MintTextField
               {...field}
-              label="Password"
+              label={t("login.password")}
               type="password"
               fullWidth
               error={!!fieldState.error}
@@ -124,21 +124,21 @@ export default function Login() {
             fullWidth
             sx={{ textTransform: "none" }}
           >
-            Login
+            {t("login.submit")}
           </MintButton>
 
           <Stack gap={0.5} alignItems="flex-end">
             <Box display="flex" gap={0.5}>
               <MintTypography variant="body2" color="text.secondary">
-                Not a member?
+                {t("login.notMember")}
               </MintTypography>
               <MintLink href="#" underline="hover" color="primary">
-                Register
+                {t("login.register")}
               </MintLink>
             </Box>
 
             <MintLink href="#" underline="hover" color="primary">
-              Forgot ID or Password?
+              {t("login.forgot")}
             </MintLink>
           </Stack>
         </Stack>

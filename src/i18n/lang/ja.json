@@ -1,0 +1,17 @@
+{
+    "translation": {
+        "dashboard": {
+            "header": "インタビュー"
+        },
+        "login": {
+            "title": "ログイン",
+            "subtitle": "続行するには認証情報を入力してください",
+            "username": "ユーザー名",
+            "password": "パスワード",
+            "submit": "ログイン",
+            "notMember": "まだ登録していませんか？",
+            "register": "登録する",
+            "forgot": "IDまたはパスワードをお忘れですか？"
+        }
+    }
+}
