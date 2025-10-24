@@ -1,7 +1,27 @@
 {
     "translation": {
         "dashboard": {
-            "header": "InterviewX"
+            "header": "InterviewX",
+            "navdata": {
+                "interviews": "Interview List",
+                "tickets": "Purchase Tickets",
+                "home": "Home",
+                "case-management": "Project Management",
+                "ticket-management": "Ticket Management",
+                "interview-video": "Interview Videos",
+                "inquiry": "Contact Us",
+                "see-more": "See More",
+                "macromill-my-page": "Macromill My Page",
+                "terms-of-service": "Terms of Service",
+                "privacy-policy": "Privacy Policy",
+                "info-security-policy": "Information Security Policy",
+                "security-check-sheet": "Security Check Sheet",
+                "company-profile": "Company Profile",
+                "log-out": "Log Out",
+                "user-guide": "User Guide",
+                "user-guide-head": "For First-Time Users",
+                "ticket": "Ticket"
+            }
         },
         "login": {
             "title": "Login",

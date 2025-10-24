@@ -1,7 +1,27 @@
 {
     "translation": {
         "dashboard": {
-            "header": "インタビュー"
+            "header": "インタビュー",
+            "navdata": {
+                "interviews": "インタビュー一覧",
+                "tickets": "チケット購入",
+                "home": "ホーム",
+                "case-management": "案件管理",
+                "ticket-management": "チケット管理",
+                "interview-video": "インタビュー動画",
+                "inquiry": "問い合わせ",
+                "see-more": "もっと見る",
+                "macromill-my-page": "マクロミルマイページ",
+                "terms-of-service": "利用規約",
+                "privacy-policy": "プライバシーポリシー",
+                "info-security-policy": "情報セキュリティポリシー",
+                "security-check-sheet": "セキュリティチェックシート",
+                "company-profile": "会社概要",
+                "log-out": "ログアウト",
+                "user-guide": "ご利用ガイド",
+                "user-guide-head": "初めての方へ",
+                "ticket": "チケット"
+            }
         },
         "login": {
             "title": "ログイン",
