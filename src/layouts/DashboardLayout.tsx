@@ -20,6 +20,29 @@ export default function DashboardLayout({ children }: any) {
   interface AppBarProps extends MuiAppBarProps {
     open?: boolean;
   }
+  const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })<{
+    open?: boolean;
+  }>(({ theme, open }) => ({
+    height: "100vh",
+    overflow: "auto",
+    display: "flex",
+    flexDirection: "column",
+    backgroundColor: theme.mint.color.background.uiBackground,
+    flexGrow: 1,
+    transition: theme.transitions.create("margin", {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+    marginLeft: `-${theme.mint.drawerWidth}px`,
+    ...(open && {
+      width: `calc(100% - ${theme.mint.drawerWidth}px)`,
+      transition: theme.transitions.create("margin", {
+        easing: theme.transitions.easing.easeOut,
+        duration: theme.transitions.duration.enteringScreen,
+      }),
+      marginLeft: 0,
+    }),
+  }));
 
   const AppBar = styled(MintAppBar, {
     shouldForwardProp: (prop) => prop !== "open",
@@ -37,6 +60,16 @@ export default function DashboardLayout({ children }: any) {
       }),
     }),
   }));
+
+  const DrawerHeader = styled("div")(({ theme }) => ({
+    display: "flex",
+    alignItems: "center",
+    padding: theme.spacing(0, 1),
+    // necessary for content to be below app bar
+    ...theme.mixins.toolbar,
+    justifyContent: "flex-end",
+  }));
+
   return (<>
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -49,6 +82,20 @@ export default function DashboardLayout({ children }: any) {
 
       </AppBar>
       <AppSideBar handleLogout={toggleLogoutConfirmModal} open={open} />
+      <Main open={open} id="main-container">
+        <DrawerHeader
+          sx={{
+            height: theme.mint.appBarHeight,
+            minHeight: theme.mint.appBarHeight,
+            [theme.breakpoints.up("xs")]: {
+              minHeight: theme.mint.appBarHeight,
+            },
+          }}
+        />
+        <Box p={theme.mint.spacing.xl} flexGrow={1}>
+          {children}
+        </Box>
+      </Main>
     </Box>
   </>);
 
