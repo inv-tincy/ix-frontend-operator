@@ -1,27 +1,52 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* surface colors */
+  --mm-surface-accent-primary: #162987;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  /* text colors */
+  --mm-text-accent: #162987;
+  --mm-text-high: #0a1826;
+  --mm-text-medium: #0a1826b5;
+  --mm-text-low: #0a182696;
+  --mm-text-light: #fff;
+  --mm-text-link: #006891;
+  /* border colors */
+  --mm-border-high: #0a1826b5;
+  --mm-border-medium: #0a182642;
+  --mm-border-low: #0a182614;
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
+  /* background colors */
+  --mm-background-container-bg: #fff;
+  --mm-background-container-bg-layer-2: #f5f6f6;
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* border colors */
+
+  --mm-border-accent: #162987;
+
+  /* ex colors */
+  --mm-ex-blue-1: #d9ecff;
+  --mm-ex-blue-4: #002952;
+  --mm-ex-yellow-1: #fff7ce;
+  --mm-ex-yellow-4: #453100;
+  --mm-ex-teal-1: #defffb;
+  --mm-ex-teal-4: #073d36;
+  --mm-ex-gray-1: #ebecee;
+  --mm-ex-gray-4: #2f3b47;
+  --mm-ex-red-1: #ffe0de;
+  --mm-ex-red-4: #610d07;
+  --mm-ex-orange-1: #ffe8db;
+  --mm-ex-orange-4: #5c2404;
+
+  /* sizes */
+  --mm-size-radius-s: 4px;
+  --mm-radius-xl: 12px;
+
+  /* spacing */
+  --mm-spacing-s: 4px;
+
+  /* radius */
+  --mm-radius-s: 4px;
+  --mm-radius-m: 8px;
+  --mm-radius-xl: 16px;
 }
 
 * {
@@ -30,13 +55,45 @@ body {
   margin: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+body {
+  overflow: auto !important;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
+}
+/* .MuiDateRangePickerDay-rangeIntervalDayHighlight {
+  background-color: #104ee81c;
+} */
+.MuiDateRangePickerDay-root .Mui-selected {
+  background-color: #162987;
+}
+.MuiDateRangePickerDay-root .Mui-selected:hover {
+  background-color: #162987 !important;
+}
+
+.react-player{
+  background-color: #2F3B47 !important;
+}
+
+
+[id^="agora-video-player-track"] {
+  background-color: unset !important;
+}
+
+video {
+  border-radius:  8px;
+  object-fit: contain !important;
+  background-color: rgba(10, 24, 38, 0.71);
+}
+
+/* #monitor [id^="agora-video-player-track"] {
+  background-color: rgba(10, 24, 38, 0.71) !important;
+} */
+
+pre {
+  font-family: "Noto Sans JP", sans-serif, monospace;
 }

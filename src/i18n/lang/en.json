@@ -1,0 +1,62 @@
+{
+    "translation": {
+        "dashboard": {
+            "header": "InterviewX",
+            "navdata": {
+                "interviews": "Interview List",
+                "tickets": "Purchase Tickets",
+                "home": "Home",
+                "case-management": "Project Management",
+                "ticket-management": "Ticket Management",
+                "interview-video": "Interview Videos",
+                "inquiry": "Contact Us",
+                "see-more": "See More",
+                "macromill-my-page": "Macromill My Page",
+                "terms-of-service": "Terms of Service",
+                "privacy-policy": "Privacy Policy",
+                "info-security-policy": "Information Security Policy",
+                "security-check-sheet": "Security Check Sheet",
+                "company-profile": "Company Profile",
+                "log-out": "Log Out",
+                "user-guide": "User Guide",
+                "user-guide-head": "For First-Time Users",
+                "ticket": "Ticket"
+            }
+        },
+        "campaign": {
+            "title": "Campaign Management",
+            "button": {
+                "create": "Create a new project",
+                "search": "Search"
+            },
+            "nopublishedproject": "There are currently no published cases.",
+            "campaignList": {
+                "tableHeader": {
+                    "status": "Status",
+                    "projectTitle": "Project Title",
+                    "case-id": "Project ID",
+                    "implementationPeriod": "Implementation Period",
+                    "releaseDate": "Release Date",
+                    "noOfApllicants": "Number of Applicants",
+                    "noOfApllicants1": "Number of Applications",
+                    "noOfRecruiting": "Number of Recruits",
+                    "fixedDate": "Confirmed Schedule",
+                    "waitingList": "Waiting List",
+                    "completed": "Completed",
+                    "noOfParticipants": "Number of Participants"
+                },
+                "delete-success": "The project has been deleted!"
+            }
+        },
+        "login": {
+            "title": "Login",
+            "subtitle": "Please enter your credentials to continue",
+            "username": "Username",
+            "password": "Password",
+            "submit": "Login",
+            "notMember": "Not a member?",
+            "register": "Register",
+            "forgot": "Forgot ID or Password?"
+        }
+    }
+}

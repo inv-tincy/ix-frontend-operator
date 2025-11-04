@@ -1,0 +1,62 @@
+{
+    "translation": {
+        "dashboard": {
+            "header": "インタビュー",
+            "navdata": {
+                "interviews": "インタビュー一覧",
+                "tickets": "チケット購入",
+                "home": "ホーム",
+                "case-management": "案件管理",
+                "ticket-management": "チケット管理",
+                "interview-video": "インタビュー動画",
+                "inquiry": "問い合わせ",
+                "see-more": "もっと見る",
+                "macromill-my-page": "マクロミルマイページ",
+                "terms-of-service": "利用規約",
+                "privacy-policy": "プライバシーポリシー",
+                "info-security-policy": "情報セキュリティポリシー",
+                "security-check-sheet": "セキュリティチェックシート",
+                "company-profile": "会社概要",
+                "log-out": "ログアウト",
+                "user-guide": "ご利用ガイド",
+                "user-guide-head": "初めての方へ",
+                "ticket": "チケット"
+            }
+        },
+        "campaign": {
+            "title": "キャンペーン管理",
+            "button": {
+                "create": "案件を作成",
+                "search": "検索"
+            },
+            "nopublishedproject": "現在公開されている案件はありません。",
+            "campaignList": {
+                "tableHeader": {
+                    "status": "ステータス",
+                    "projectTitle": "案件タイトル",
+                    "case-id": "案件ID",
+                    "implementationPeriod": "実施期間",
+                    "releaseDate": "公開日",
+                    "noOfApllicants": "募集人数",
+                    "noOfApllicants1": "応募人数",
+                    "noOfRecruiting": "募集人数",
+                    "fixedDate": "日程確定",
+                    "waitingList": "空き枠待ち",
+                    "completed": "完了",
+                    "noOfParticipants": "実施人数"
+                },
+                "delete-success": "案件を削除しました！"
+            }
+        },
+        "login": {
+            "title": "ログイン",
+            "subtitle": "続行するには認証情報を入力してください",
+            "username": "ユーザー名",
+            "password": "パスワード",
+            "submit": "ログイン",
+            "notMember": "まだ登録していませんか？",
+            "register": "登録する",
+            "forgot": "IDまたはパスワードをお忘れですか？"
+        }
+    }
+}
